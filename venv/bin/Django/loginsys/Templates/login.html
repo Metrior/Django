@@ -1,0 +1,18 @@
+{% extends 'Main.html' %}
+
+{% block login %}
+    <div class="'large-offset-3 large-6 column">
+        <form action="/auth/login/" method="post">
+            <label for="username">Имя пользователя</label>
+            <input type="text" name="username" id="username">
+            <label for="password">Пароль</label>
+            <input type="text" name="password" id="password">
+            {% if login_error %}
+                <label class="error">{{ login_error }}</label>
+            {% endif %}
+            <input class="button" type="submit" value="Войти">
+
+        </form>
+    </div>
+
+{% endblock %}
