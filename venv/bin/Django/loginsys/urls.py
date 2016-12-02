@@ -15,10 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from article.views import basic_one, template_two, template_three_simple, articles, article, addlike, addcomment
+from loginsys.views import login, logout
 
 urlpatterns = [
-    url(r'^login/', 'loginsys.views.login'),
-    url(r'^login/', 'loginsys.views.logout'),
+    url(r'^login/', login),
+    url(r'^logout/', logout),
 
 ]
